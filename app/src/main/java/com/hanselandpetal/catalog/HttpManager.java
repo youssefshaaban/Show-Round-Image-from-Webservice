@@ -1,3 +1,9 @@
+/*
+
+class HttpManager used to connect with web service througth method getData
+and retrieve inputstream from web and read stream put into string
+*/
+
 package com.hanselandpetal.catalog;
 
 import java.io.BufferedReader;
@@ -5,12 +11,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import android.util.Base64;
 import android.util.Log;
 
 public class HttpManager {
 
+// get data without password
 	public static String getData(String uri) {
 		
 		BufferedReader reader = null;
@@ -45,6 +51,9 @@ public class HttpManager {
 		
 	}
 
+
+// if you want get data from webservice and webservice has userName and password
+// this part depend on bulding webservice
 	public static String getData(String uri, String userName, String password) {
 		
 		BufferedReader reader = null;
